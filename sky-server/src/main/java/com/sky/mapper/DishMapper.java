@@ -9,6 +9,7 @@ import com.sky.vo.DishVO;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -52,6 +53,17 @@ public interface DishMapper {
     @Delete("DELETE from dish where id = #{id}")
     void deleteById(Long id);
 
-
+    /**
+     * 根据主键删除菜品数据
+     * @param ids
+     */
     void deleteByIds(List<Long> ids);
+
+    /**
+     * 根据id来动态修改菜品
+     * @param dish
+     */
+    @AutoFill(value = OperationType.UPDATE)
+    void update(Dish dish);
+
 }
