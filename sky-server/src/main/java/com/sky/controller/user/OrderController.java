@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+
 @Slf4j
 @RestController("userOrderController")
 @RequestMapping("/user/order")
@@ -75,5 +76,23 @@ public class OrderController {
         OrderVO orderVO = orderService.details(id);
         return Result.success(orderVO);
     }
+
+    /**
+     * 用户取消订单
+     * @param id
+     * @return
+     * @throws Exception
+     */
+    @PutMapping("/cancel/{id}")
+    @ApiOperation("取消订单")
+
+    public Result cancel(@PathVariable("id") Long id) throws Exception {
+        orderService.userCancelById(id);
+        return Result.success();
+
+    }
+
+
+
 
 }
