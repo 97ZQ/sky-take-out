@@ -28,16 +28,18 @@ public class OrderController {
 
     /**
      * 订单搜索
+     *
      * @param ordersPageQueryDTO
      * @return
      */
     @GetMapping("/conditionSearch")
     @ApiOperation("订单搜索")
-    public Result<PageResult> conditionSearch(OrdersPageQueryDTO ordersPageQueryDTO){
+    public Result<PageResult> conditionSearch(OrdersPageQueryDTO ordersPageQueryDTO) {
         PageResult pageResult = orderService.conditionSearch(ordersPageQueryDTO);
-
         return Result.success(pageResult);
     }
+
+
     @GetMapping("/statistics")
     @ApiOperation("各个状态的订单数量统计")
     public Result<OrderStatisticsVO> statistics(){
