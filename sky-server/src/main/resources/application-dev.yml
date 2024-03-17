@@ -26,3 +26,8 @@ sky:
     weChatPayCertFilePath: C:\software\wechatpay_166D96F876F45C7D07CE98952A96EC980368ACFC.pem
     notifyUrl: https://9ea0754.r19.cpolar.top/notify/paySuccess
     refundNotifyUrl: https://9ea0754.r19.cpolar.top/notify/refundSuccess
+  shop:
+    address: 广东省广州市番禺区广东工业大学大学城校区-南门
+  baidu:
+    ak: sasasasasasasasja
+#    TODO需要修改ak
