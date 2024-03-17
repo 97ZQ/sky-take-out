@@ -53,7 +53,7 @@ public class OrderServiceImpl implements OrderService {
 
 
     private Orders orders;
-    @Value("${sky.shop.adddress}")
+    @Value("${sky.shop.address}")
     private String shopAddress;
     @Value("${sky.baidu.ak}")
     private String ak;
